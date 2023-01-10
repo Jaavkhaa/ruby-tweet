@@ -1,0 +1,11 @@
+<% unless flash[:tweet_errors] %>
+  <% flash.each do |type, message| %>
+    <%
+=begin%>
+ <div class="<%= flash_classes(type) %>">
+      <%= message %>
+    </div> 
+<%
+=end%>
+  <% end %>
+<% end %>
